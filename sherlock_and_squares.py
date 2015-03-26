@@ -1,3 +1,5 @@
+# Author : Rajat Mhetre
+# follow and drop me a line at @rajat_mhetre
 import math
 
 def squares_between(x, y):
