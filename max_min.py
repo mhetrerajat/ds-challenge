@@ -5,12 +5,11 @@
 
 n = int(input())
 k = int(input())
-num_list,k_list = [],[]
-
-for _ in range(n):
-    num = int(input())
-    num_list.append(num)
-
+num_list = [int(input()) for _ in range(0,n)]
 num_list.sort()
-k_list = num_list[:k]
-print(max(k_list)-min(k_list))
+min_unfairness = 1000000000
+
+for i in range(n - k + 1):
+    min_unfairness = min(min_unfairness, num_list[i+k-1] - num_list[i])
+
+print(min_unfairness)
