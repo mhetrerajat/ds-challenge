@@ -1,0 +1,8 @@
+# vscode
+.vscode
+
+# pipenv
+*.lock
+
+
+
