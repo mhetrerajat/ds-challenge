@@ -7,6 +7,9 @@ Do this till there is no swap in one complete iteration.
 import random
 import copy
 
+def get_random_numbers():
+    return random.sample(range(1, 100), 10)
+
 def sort(numbers):
     count = len(numbers)
     sorted_numbers = copy.deepcopy(numbers) # not necessary
@@ -30,7 +33,7 @@ def sort(numbers):
     return sorted_numbers
 
 def main():
-    numbers = random.sample(range(1, 100), 10)
+    numbers = get_random_numbers()
     sorted_numbers = sort(numbers)
     print("Before : {0} -> Sorted : {1}".format(numbers, sorted_numbers))
 
