@@ -1,3 +1,9 @@
+"""
+Bubble Sort
+Iterate through list of numbers by comparing them in pairs and keeping smaller elements on left side by swapping them.
+Do this till there is no swap in one complete iteration.
+"""
+
 import random
 import copy
 
