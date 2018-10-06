@@ -7,8 +7,8 @@ Do this till there is no swap in one complete iteration.
 import random
 import copy
 
-def get_random_numbers():
-    return random.sample(range(1, 100), 10)
+def get_random_numbers(length=10):
+    return random.sample(range(1, 100), length)
 
 def sort(numbers):
     count = len(numbers)
