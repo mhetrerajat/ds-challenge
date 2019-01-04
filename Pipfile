@@ -7,6 +7,8 @@ name = "pypi"
 commitizen = "*"
 
 [dev-packages]
+yapf = "*"
+isort = "*"
 
 [requires]
 python_version = "3.7"
