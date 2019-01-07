@@ -2,7 +2,7 @@
 
 
 def fib(n):
-    return dynamic(n)
+    return memo(n)
 
 
 def recursion(n):
@@ -39,6 +39,23 @@ def space_efficient(n):
             b, a = c, b
 
         return c
+
+
+_memo = [0, 1]
+
+
+def memo(n):
+    if n in _memo:
+        return _memo[n]
+    else:
+        if n == 0:
+            return 0
+        elif n == 1:
+            return 1
+        else:
+            f = memo(n - 1) + memo(n - 2)
+            _memo.append(f)
+            return f
 
 
 def get_nth_fib(n):
