@@ -1,2 +1,5 @@
 # DATA DIR
 data
+
+# Python
+__pycache__
