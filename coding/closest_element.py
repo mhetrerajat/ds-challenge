@@ -17,7 +17,7 @@ def closest(arr, target):
             
             if target < arr[mid]:
                 if mid > 0 and target > arr[mid-1]:
-                    if target - arr[mid-1] > arr[mid] - target:
+                    if target - arr[mid-1] >= arr[mid] - target:
                         return arr[mid]
                     else:
                         return arr[mid-1]
@@ -25,7 +25,7 @@ def closest(arr, target):
                 right = mid
             else:
                 if mid < len(arr) - 1 and target < arr[mid+1]:
-                    if arr[mid+1] - target > target - arr[mid]:
+                    if arr[mid+1] - target >= target - arr[mid]:
                         return arr[mid]
                     else:
                         return arr[mid+1]
