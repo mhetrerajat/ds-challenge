@@ -1,7 +1,6 @@
 
 
-
-
+# Trivial solution
 def trivial(matrix, A, length):
     for i in range(length):
         matrix[i][i] = i
@@ -17,11 +16,21 @@ def trivial(matrix, A, length):
 
     return matrix
 
-
-def trivial_rmq(matrix, A, n1, n2):
+def trivial_rmq(matrix, A, length, n1, n2):
     # Preprocessing matrix
     matrix = trivial(matrix, A, length)
     return matrix[n1][n2]
+
+
+
+# sqrt solution
+def batch_process(matrix, A, length):
+    pass
+
+
+
+def rmq(matrix, A, length, n1, n2):
+    return trivial_rmq(matrix, A, length, n1, n2)
 
 if __name__ == "__main__":
     A = [2,4,3,1,6,7,8,9,1,7]
@@ -30,5 +39,5 @@ if __name__ == "__main__":
     
     # Find rmq
     n1, n2 = 2, 7
-    rmq = trivial_rmq(matrix, A, n1, n2)
+    rmq = rmq(matrix, A, length, n1, n2)
     assert rmq == 3 # index of min value
