@@ -7,7 +7,7 @@ def get_tablet(test_cases, budget):
         if budget >= p:
             max_area = max(max_area, w*h)
 
-    return max_area if max_area >= 0 else "no tablet"
+    return max_area if max_area > 0 else "no tablet"
 
 def main():
     T = int(input().strip())
