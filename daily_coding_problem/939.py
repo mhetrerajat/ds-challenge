@@ -24,18 +24,20 @@ def print_matrix(matrix: List[List[int]]) -> List[str]:
         right = right - 1
 
         # right -> left
-        for idx in range(right, left, -1):
-            idx = idx - 1
-            item = matrix[bottom - 1][idx]
-            print_order.append(item)
-        bottom = bottom - 1
+        if top < bottom:
+            for idx in range(right, left, -1):
+                idx = idx - 1
+                item = matrix[bottom - 1][idx]
+                print_order.append(item)
+            bottom = bottom - 1
 
         # bottom -> top
-        for idx in range(bottom, top, -1):
-            idx = idx - 1
-            item = matrix[idx][left]
-            print_order.append(item)
-        left = left + 1
+        if left < right:
+            for idx in range(bottom, top, -1):
+                idx = idx - 1
+                item = matrix[idx][left]
+                print_order.append(item)
+            left = left + 1
 
     return print_order
 
@@ -108,3 +110,7 @@ if __name__ == "__main__":
         13,
         12,
     ]
+
+    # Test Case 3
+    matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+    assert print_matrix(matrix) == [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
