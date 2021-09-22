@@ -1,8 +1,42 @@
+import heapq
 import sys
-from typing import List, Tuple
+from typing import List, Tuple, NewType
+
+EdgesType = NewType("EdgesType", List[Tuple[int]])
 
 
-def get_propagation_time(vertices: int, edges: List[Tuple[int]]) -> int:
+def priority_queue_solution(vertices: int, edges: EdgesType) -> int:
+
+    graph = {idx: [] for idx in range(vertices + 1)}
+    for (u, v, w) in edges:
+        graph[u].append((v, w))
+        graph[v].append((u, w))
+
+    processed = set()
+    times = [sys.maxsize] * (vertices + 1)
+    times[0] = 0
+
+    # Priority queue with initial node
+    pq = []
+    heapq.heappush(pq, (0, 0))
+
+    while pq:
+
+        _, processing_node = heapq.heappop(pq)
+        processed.add(processing_node)
+
+        neighbours = graph[processing_node]
+        for (neighbour, weight) in neighbours:
+            if neighbour not in processed:
+                new_weight = times[processing_node] + weight
+                if times[neighbour] > new_weight:
+                    times[neighbour] = new_weight
+                    heapq.heappush(pq, (new_weight, neighbour))
+
+    return max(times)
+
+
+def get_propagation_time(vertices: int, edges: EdgesType) -> int:
     """Compute total time to send message from start to end node"""
 
     # Find the shortest time required to visit each node from source
@@ -54,5 +88,5 @@ if __name__ == "__main__":
         (3, 5, 10),
         (3, 4, 5),
     ]
-    propagation_time = get_propagation_time(vertices=N, edges=edges)
+    propagation_time = priority_queue_solution(vertices=N, edges=edges)
     assert propagation_time == 9
