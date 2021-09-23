@@ -1,5 +1,9 @@
 # Daily Coding Problems
 
+## Index
+
+- [Solution #942](https://github.com/mhetrerajat/ds-challenge/pull/8)
+
 ## Problem #939
 
 Given a N by M matrix of numbers, print out the matrix in a clockwise spiral.
