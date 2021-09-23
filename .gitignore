@@ -102,3 +102,6 @@ ENV/
 
 # exercism
 .exercism
+
+# VSCode
+.vscode
