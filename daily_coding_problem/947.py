@@ -1,4 +1,4 @@
-def get_smallest_sparse_number(N: int) -> int:
+def naive(N: int) -> int:
     def is_sparse(number: int) -> bool:
         prev = None
         while number != 0:
@@ -23,6 +23,39 @@ def get_smallest_sparse_number(N: int) -> int:
             return num
         else:
             num += 1
+
+
+def get_smallest_sparse_number(N: int) -> int:
+    # Build binary representation of the number
+    number = N
+    bins = []
+    while number != 0:
+        remainder = number % 2
+        bins.append(remainder)
+        number = number // 2
+
+    # Add zero to the initial to avoid overflow
+    bins = bins + [0]
+
+    # bins store the binary number in reverse format
+    # reverse iterate to check the trailing numbers
+    prev = None
+    for idx, item in enumerate(bins):
+        if prev is None:
+            prev = item
+        elif prev == item and item == 1:
+            bins[idx + 1] = 1
+            for tidx in range(idx + 1):
+                bins[tidx] = 0
+            prev = 0
+        else:
+            prev = item
+
+    result = 0
+    for idx, num in enumerate(bins):
+        result += 2 ** idx * num
+
+    return result
 
 
 if __name__ == "__main__":
