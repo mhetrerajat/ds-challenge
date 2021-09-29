@@ -3,6 +3,7 @@
 ## Index
 
 - [Solution #942](https://github.com/mhetrerajat/ds-challenge/pull/8)
+- [Solution #947](https://github.com/mhetrerajat/ds-challenge/pull/14)
 
 ## Problem #939
 
