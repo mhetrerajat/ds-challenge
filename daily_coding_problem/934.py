@@ -1,4 +1,4 @@
-def get_recurring_char(string: str) -> str:
+def naive(string: str) -> str:
     map = {}
     for char in string:
         count = map.get(char, 0)
@@ -6,6 +6,22 @@ def get_recurring_char(string: str) -> str:
             return char
         else:
             map[char] = 1
+    return None
+
+
+def get_recurring_char(string: str) -> str:
+    """assuming string only contains lowercase letters"""
+    checker = 0
+    for char in string:
+        bin_idx = ord(char) - ord("a")
+
+        # will return a non-zero binary number
+        # if faces the duplicate character
+        if (checker & (1 << bin_idx)) > 0:
+            return char
+
+        checker = checker | (1 << bin_idx)
+
     return None
 
 
