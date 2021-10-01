@@ -8,14 +8,14 @@ def get_nth_perfect_num(N: int) -> int:
 
         return sum == 10
 
-    num = 18
+    num = 19
     nth_num = N
     while True:
         if is_perfect(num):
             nth_num -= 1
             if nth_num == 0:
                 return num
-        num += 1
+        num += 9
 
 
 if __name__ == "__main__":
