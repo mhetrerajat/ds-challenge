@@ -2,6 +2,7 @@
 
 ## Index
 
+- [Solution #928](https://github.com/mhetrerajat/ds-challenge/pull/18)
 - [Solution #931](https://github.com/mhetrerajat/ds-challenge/pull/17)
 - [Solution #933](https://github.com/mhetrerajat/ds-challenge/pull/16)
 - [Solution #934](https://github.com/mhetrerajat/ds-challenge/pull/15)
