@@ -1,7 +1,7 @@
 from typing import List
 
 
-def get_arr(sign_arr: List[str]) -> List[int]:
+def naive(sign_arr: List[str]) -> List[int]:
     result = []
     max_num = 0
     for idx, sign in enumerate(sign_arr):
@@ -22,6 +22,26 @@ def get_arr(sign_arr: List[str]) -> List[int]:
             result.append(0)
 
     return result
+
+
+def get_arr(sign_arr: List[str]) -> List[int]:
+    result = []
+
+    max_num = 1
+    min_num = -1
+
+    for sign in sign_arr:
+        if sign is None:
+            result.append(0)
+        elif sign == "+":
+            result.append(max_num)
+            max_num += 1
+        elif sign == "-":
+            result.append(min_num)
+            min_num -= 1
+
+    # Add absolute of min_num i.e here, (min_num + 1) in final result
+    return [num + abs(min_num + 1) for num in result]
 
 
 if __name__ == "__main__":
