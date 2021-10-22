@@ -9,6 +9,7 @@
 - [Solution #942](https://github.com/mhetrerajat/ds-challenge/pull/8)
 - [Solution #947](https://github.com/mhetrerajat/ds-challenge/pull/14)
 - [Solution #965](https://github.com/mhetrerajat/ds-challenge/pull/23)
+- [Solution #964](https://github.com/mhetrerajat/ds-challenge/pull/24)
 
 ## Problem #939
 
