@@ -8,6 +8,7 @@
 - [Solution #934](https://github.com/mhetrerajat/ds-challenge/pull/15)
 - [Solution #942](https://github.com/mhetrerajat/ds-challenge/pull/8)
 - [Solution #947](https://github.com/mhetrerajat/ds-challenge/pull/14)
+- [Solution #965](https://github.com/mhetrerajat/ds-challenge/pull/23)
 
 ## Problem #939
 
