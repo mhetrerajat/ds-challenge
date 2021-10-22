@@ -1,6 +1,6 @@
 def is_valid_utf8(encoded_string: str) -> bool:
     nbytes = len(encoded_string.split(" "))
-    if encoded_string.startswith("0"):
+    if encoded_string.startswith("0") and nbytes == 1:
         return True
     elif encoded_string.startswith("1" * nbytes + "0") and all(
         [x.startswith("10") for x in encoded_string.split(" ")[1:]]
