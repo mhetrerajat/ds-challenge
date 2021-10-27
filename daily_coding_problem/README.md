@@ -10,6 +10,7 @@
 - [Solution #947](https://github.com/mhetrerajat/ds-challenge/pull/14)
 - [Solution #965](https://github.com/mhetrerajat/ds-challenge/pull/23)
 - [Solution #964](https://github.com/mhetrerajat/ds-challenge/pull/24)
+- [Solution #973](https://github.com/mhetrerajat/ds-challenge/blob/master/daily_coding_problem/973.py)
 
 ## Problem #939
 
