@@ -153,3 +153,7 @@ bin/
 
 #general
 *.class
+
+# DATA DIR
+data
+
