@@ -157,3 +157,6 @@ bin/
 # DATA DIR
 data
 
+# pipenv
+*.lock
+
